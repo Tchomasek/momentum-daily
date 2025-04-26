@@ -1,8 +1,8 @@
 import "./App.css";
-import Home from "./pages/Home";
+import Home from "./pages/Home/Home";
 import { BrowserRouter, Route, Routes, Link } from "react-router-dom";
-import CreatePost from "./pages/CreatePost";
-import Post from "./pages/Post";
+import CreateTask from "./pages/CreateTask";
+import Day from "./pages/Day/Day";
 
 function App() {
   return (
@@ -10,12 +10,12 @@ function App() {
       <BrowserRouter>
         <div className="navbar">
           <Link to="/">Home Page</Link>
-          <Link to="/createpost">Create Post</Link>
+          <Link to="/createtask">Create Task</Link>
         </div>
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/createpost" element={<CreatePost />} />
-          <Route path="/post/:id" element={<Post />} />
+          <Route path="/createtask" element={<CreateTask />} />
+          <Route path="/day/:date" element={<Day />} />
         </Routes>
       </BrowserRouter>
     </div>

@@ -8,14 +8,13 @@ app.use(cors());
 const db = require("./models");
 
 // Routers
-const postRouter = require("./routes/Posts");
-app.use("/posts", postRouter);
-
-const comentsRouter = require("./routes/Comments");
-app.use("/comments", comentsRouter);
+const taskRouter = require("./routes/Tasks");
+app.use("/tasks", taskRouter);
+const completionsRouter = require("./routes/Completions");
+app.use("/completions", completionsRouter);
 
 db.sequelize.sync().then(() => {
-  app.listen(3001, () => {
+  app.listen(process.env.PORT || 3001, () => {
     console.log("Server running on port 3001");
   });
 });

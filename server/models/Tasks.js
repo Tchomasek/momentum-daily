@@ -1,9 +1,9 @@
 module.exports = (sequelize, DataTypes) => {
-  const Comments = sequelize.define("Comments", {
-    commentBody: {
+  const Tasks = sequelize.define("Tasks", {
+    title: {
       type: DataTypes.STRING,
       allowNull: false,
     },
   });
-  return Comments;
+  return Tasks;
 };

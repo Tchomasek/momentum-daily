@@ -1,0 +1,15 @@
+.day-container {
+  padding: 20px;
+
+  &.complete-day {
+    background-color: rgb(81, 159, 81);
+  }
+
+  &.incomplete-day {
+    background-color: rgb(233, 115, 115);
+  }
+
+  &.not-relevant {
+    background-color: gray !important;
+  }
+}

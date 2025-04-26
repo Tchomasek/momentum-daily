@@ -11,24 +11,11 @@ body {
   padding: 0;
 }
 
-.post {
-  width: 400px;
-  height: 300px;
-  border-radius: 10px;
-  display: flex;
-  flex-direction: column;
-  margin-top: 50px;
-  border: 1px solid lightgray;
-  font-family: Arial, Helvetica, sans-serif;
-
-  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-}
-
-.post:hover {
+.task:hover {
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   cursor: pointer;
 }
-.post .title {
+.title {
   flex: 20%;
   border-bottom: 1px solid lightgray;
   background-color: dodgerblue;
@@ -37,7 +24,7 @@ body {
   color: white;
 }
 
-.post .body {
+.body {
   flex: 60%;
   display: grid;
   place-content: center;
@@ -228,4 +215,45 @@ button {
 
 .loginContainer input {
   border: 2px solid dodgerblue;
+}
+
+.calendar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.day-tasks {
+  display: flex;
+  flex-direction: column;
+}
+
+.completed-task {
+  width: 200px;
+  height: 50px;
+  border-radius: 10px;
+  display: flex;
+  margin-top: 8px;
+  border: 1px solid lightgray;
+  font-family: Arial, Helvetica, sans-serif;
+  justify-content: center;
+  align-items: center;
+  background-color: green;
+
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+.not-completed-task {
+  width: 200px;
+  height: 50px;
+  border-radius: 10px;
+  display: flex;
+  margin-top: 8px;
+  border: 1px solid lightgray;
+  font-family: Arial, Helvetica, sans-serif;
+  justify-content: center;
+  align-items: center;
+  background-color: red;
+
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }

@@ -1,28 +1,25 @@
 import axios from "axios";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
-import { PostType } from "../types";
+import { TaskType } from "../types";
 import { useNavigate } from "react-router-dom";
+import { API_URL } from "../api_url";
 
-function CreatePost() {
+function CreateTask() {
   const navigate = useNavigate();
 
   const initialValues = {
     title: "",
-    postText: "",
-    username: "",
   };
 
-  const onSubmit = (data: PostType) => {
-    axios.post("http://localhost:3001/posts", data).then((response) => {
+  const onSubmit = (data: TaskType) => {
+    axios.post(`${API_URL}/tasks`, data).then(() => {
       navigate("/");
     });
   };
 
   const validationSchema = Yup.object().shape({
     title: Yup.string().required("You must input a title"),
-    postText: Yup.string().required(),
-    username: Yup.string().min(3).max(15).required(),
   });
 
   return (
@@ -42,23 +39,7 @@ function CreatePost() {
               name="title"
               placeholder="Title"
             />
-            <label>Post: </label>
-            <ErrorMessage name="postText" component="span" />
-            <Field
-              autoComplete="off"
-              id="inputCreatePost"
-              name="postText"
-              placeholder="Text"
-            />
-            <label>Username: </label>
-            <ErrorMessage name="username" component="span" />
-            <Field
-              autoComplete="off"
-              id="inputCreatePost"
-              name="username"
-              placeholder="Username"
-            />
-            <button type="submit">Create Post</button>
+            <button type="submit">Create Task</button>
           </Form>
         </Formik>
       </div>
@@ -66,4 +47,4 @@ function CreatePost() {
   );
 }
 
-export default CreatePost;
+export default CreateTask;
