@@ -13,4 +13,16 @@ router.post("/", async (req, res) => {
   res.json(task);
 });
 
+router.delete("/:title", async (req, res) => {
+  const task = req.params.title;
+
+  await Tasks.destroy({
+    where: {
+      title: task,
+    },
+  });
+
+  res.json("TASK DELETED SUCCESSFULLY");
+});
+
 module.exports = router;

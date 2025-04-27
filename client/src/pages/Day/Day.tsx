@@ -52,7 +52,6 @@ function Day() {
         }
       }
     }
-    // Check if all tasks are completed
 
     // check if ammount of tasks is higher that ammount of completions as a shortcut
     if (listOfTasks.length > listOfCompletions.length) {

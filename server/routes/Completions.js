@@ -36,7 +36,7 @@ router.delete("/:task/:day", async (req, res) => {
     },
   });
 
-  res.json("DELETED SUCCESSFULLY");
+  res.json("COMPLETION DELETED SUCCESSFULLY");
 });
 
 module.exports = router;

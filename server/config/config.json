@@ -2,7 +2,7 @@
   "development": {
     "username": "Tomas",
     "password": "heslo",
-    "database": "tutorialdb",
+    "database": "momentum-daily-db",
     "host": "localhost",
     "dialect": "mysql"
   },

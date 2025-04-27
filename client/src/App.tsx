@@ -1,7 +1,7 @@
 import "./App.css";
 import Home from "./pages/Home/Home";
 import { BrowserRouter, Route, Routes, Link } from "react-router-dom";
-import CreateTask from "./pages/CreateTask";
+import CreateTask from "./pages/ManageTasks/ManageTasks";
 import Day from "./pages/Day/Day";
 
 function App() {
@@ -10,7 +10,7 @@ function App() {
       <BrowserRouter>
         <div className="navbar">
           <Link to="/">Home Page</Link>
-          <Link to="/createtask">Create Task</Link>
+          <Link to="/createtask">Manage Tasks</Link>
         </div>
         <Routes>
           <Route path="/" element={<Home />} />
